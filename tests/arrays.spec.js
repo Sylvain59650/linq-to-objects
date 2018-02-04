@@ -1,4 +1,6 @@
-require("../sources/Array.js");
+//require("../sources/Array.js");
+
+require("../distrib/Array.min.js");
 
 var users = [
   { name: "Edward", age: 21 },

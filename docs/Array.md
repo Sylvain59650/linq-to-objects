@@ -86,17 +86,17 @@ Example
 
     aggregate(seed,accumulate,resultSelector)
 
+ An aggregation operation computes a single value from a collection of values. An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.
+
     seed: The initial accumulator value.
-
     accumulate: An accumulator function to be invoked on each element.
-
     resultSelector: A function to transform the final accumulator value into the result value.
 Returns
 
     The transformed final accumulator value.
 
 
-  An aggregation operation computes a single value from a collection of values. An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.
+ 
 
 The following illustration shows the results of two different aggregation operations on a sequence of numbers. The first operation sums the numbers. The second operation returns the maximum value in the sequence. 
 
@@ -186,6 +186,7 @@ Returns distinct elements from a sequence.
     boolean equals(Array anotherArray)
 
 Argument 
+
     anotherArray : a array
 
 Returns
@@ -372,8 +373,7 @@ Returns the first element of a sequence that satisfies a specified condition, or
     defaultValue:
 
 
-
-
+Example
 
     var names = ["Hartono Tommy", "Adams Terry","Andersen Henriette Thaulow","Hedlund Magnus", "Ito Shu"];
     console.log(names.firstOrDefault(name => name.length > 20)); // "Andersen Henriette Thaulow"
@@ -970,6 +970,15 @@ Example
 
 Removes a element from array at position index
 
+Returns
+
+    Returns the array without removed element
+    
+Example
+
+    var ints = [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    console.log(ints.removeAt(5)); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+    console.log(ints); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
 
 ## removeRange
 

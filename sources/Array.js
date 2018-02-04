@@ -18,12 +18,12 @@
 }("ArrayModule", this, function() {
   'use strict';
 
-  Array.prototype.where = function(clause) {
-    return this.filter(clause);
+  Array.prototype.where = function(predicate) {
+    return this.filter(predicate);
   }
 
   Array.prototype.add = function(values) {
-    for (var i = 0; i < arguments.length; i++) { this.push(arguments[i]); }
+    for (var i = 0, l = arguments.length; i < l; i++) { this.push(arguments[i]); }
     return this;
   }
 
@@ -37,15 +37,18 @@
     this.length = 0;
   }
 
-  Array.prototype.removeAll = function(clause) {
+  Array.prototype.removeAll = function(predicate) {
     var arr = [];
+    var nb = 0;
     for (var i = 0, len = this.length; i < len; i++) {
-      if (!clause.apply(this[i], [this[i], i])) {
+      if (!predicate.apply(this[i], [this[i], i])) {
         arr.push(this[i]);
+        nb++;
       }
     }
     this.length = 0;
     this.addRange(arr);
+    return nb;
   }
 
   Array.prototype.removeAt = function(position) {
@@ -107,22 +110,23 @@
     return defaultValue;
   }
 
-  Array.prototype.lastOrDefault = function(clause, defaultValue) {
+  Array.prototype.lastOrDefault = function(predicate, defaultValue) {
     defaultValue = defaultValue || null;
+    predicate = predicate || noop;
     if (arguments.length === 0) {
       return (this.length > 0) ? this[this.length - 1] : defaultValue;
     }
     var len = this.length;
     for (var i = len - 1; i >= 0; i--) {
-      if (clause.apply(this[i], [this[i], i])) {
+      if (predicate.apply(this[i], [this[i], i])) {
         return this[i];
       }
     }
     return defaultValue;
   }
 
-  Array.prototype.last = function(clause) {
-    var f = this.lastOrDefault(clause, null);
+  Array.prototype.last = function(predicate) {
+    var f = this.lastOrDefault(predicate, null);
     if (f == null) throw new Error("NotFoundException");
     return f;
   }
@@ -219,17 +223,6 @@
       }
     }
     return arr;
-    // that.forEach(function(x) {
-    //   if (second.includes(x)) {
-    //     newArray.push(x);
-    //   }
-    // });
-    // second.forEach(function(x) {
-    //   if (that.includes(x)) {
-    //     newArray.push(x);
-    //   }
-    // });
-    // return newArray.distinct(noop, comparer);
   }
 
   Array.prototype.selectNew = function(...fieldsNames) {
@@ -259,29 +252,32 @@
     return [...before, ...arr, ...after];
   }
 
-  Array.prototype.orderBy = function(lambda) {
-    var fn = buildFunction(lambda);
+  Array.prototype.orderBy = function(keySelector, comparer) {
+    var fn = buildFunction(keySelector);
+    comparer = comparer || defaultComparer;
     this.sort(function(a, b) {
       var x = fn.apply(a, [a]);
       var y = fn.apply(b, [b]);
-      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      return comparer(x, y);
     });
     return this;
   }
 
-  Array.prototype.orderByDescending = function(lambda) {
-    var fn = buildFunction(lambda);
+  Array.prototype.orderByDescending = function(keySelector, comparer) {
+    var fn = buildFunction(keySelector);
+    comparer = comparer || defaultComparer;
     this.sort(function(a, b) {
       var y = fn.apply(a, [a]);
       var x = fn.apply(b, [b]);
-      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      return comparer(y, x);
     });
     return this;
   }
 
 
   Array.prototype.count = function(predicate) {
-    if (predicate === undefined) return this.length;
+    if (arguments.length === 0) return this.length;
+    ensurePredicate(predicate);
     var nb = 0;
     var len = this.length;
     for (var i = 0; i < len; i++) {

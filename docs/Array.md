@@ -717,24 +717,27 @@ Example
 
 ## last
 
-    any last()
+    any last(predicate)
 
-Gets the last element of array.
+Returns the last element from a collection, or the last element that satisfies a condition.
+last has two overload methods. One overload method doesn't take any input parameter and returns last element from the collection. Second overload method takes a lambda expression to specify a condition and returns last element that satisfies the specified condition.
+method returns the last element from a collection, or the last element that satisfies the specified condition.If a given collection is empty or does not include any element that satisfied the condition then it will throw InvalidOperation exception.
 
 Arguments
 
-    None.
+    predicate:
     
 
 Returns
 
-    (*): Returns the last element of array.
+    (*): Returns the last element from a collection, or the last element that satisfies a condition.
 
 Example
 	
 
-    [1, 2, 3].last();
-    // => 3
+    console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x => x));
+    console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x => x < 3));
+    console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last());
 
 ## lastIndexOf
 
@@ -830,14 +833,14 @@ Returns the minimum value in a sequence of values.
 
 ## orderBy
 
-    Array orderBy([iteratees=[_.identity]], string [orders])
+    Array orderBy(keySelector,comparer)
 
-This method is like [sortBy](#sortby) except that it allows specifying the sort orders of the iteratees to sort by. If orders is unspecified, all values are sorted in ascending order. Otherwise, specify an order of "desc" for descending or "asc" for ascending sort order of corresponding values.
+sort the array according to the field keySelector
 
 Arguments
 
-    iteratees: The iteratees to sort by.
-    orders: The sort orders of iteratees.
+    keySelector:
+    comparer:
 
 Returns
 
@@ -853,9 +856,47 @@ Example
         { 'user': 'barney', 'age': 36 }
     ];
     
-    // Sort by `user` in ascending order and by `age` in descending order.
-    users.orderBy(['user', 'age'], ['asc', 'desc']);
-    // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+     users.orderBy(x=>x.age);
+    /*  [ 
+        { 'user': 'barney', 'age': 34 },
+        { 'user': 'barney', 'age': 36 },
+        { 'user': 'fred',   'age': 40 },
+        { 'user': 'fred',   'age': 48 },
+    ] */
+
+## orderByDescending
+
+    Array orderByDescending(keySelector,comparer)
+
+sort the array according to the field keySelector
+
+Arguments
+
+    keySelector:
+    comparer:
+
+Returns
+
+    (Array): Returns the new sorted array.
+
+Example
+	
+
+    var users = [
+        { 'user': 'fred',   'age': 48 },
+        { 'user': 'barney', 'age': 34 },
+        { 'user': 'fred',   'age': 40 },
+        { 'user': 'barney', 'age': 36 }
+    ];
+    
+     users.orderByDescending(x=>x.age);
+    /*  [ 
+         { 'user': 'fred',   'age': 48 },
+         { 'user': 'fred',   'age': 40 },
+         { 'user': 'barney', 'age': 36 },
+         { 'user': 'barney', 'age': 34 },
+     ];*/
+
 
 ## push <img src="js.png"> 
 
@@ -873,20 +914,13 @@ Example
 	myArray.push('3'); // myArray is now ["1", "2", "3"]
 
 
-## reduce
+## reduce <img src="js.png" />
 
     any reduce(Function iteratee=_.identity, any accumulator)
 
 Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee, where each successive invocation is supplied the return value of the previous. If accumulator is not given, the first element of collection is used as the initial value. The iteratee is invoked with four arguments:
 (accumulator, value, index|key, collection).
 
-Many lodash methods are guarded to work as iteratees for methods like [reduce](#reduce), [reduceRight](#reduceright), and [transform](#transform).
-
-
-Arguments
-
-    iteratee : The function invoked per iteration.
-    accumulator: The initial value.
 
 Returns
 
@@ -902,14 +936,14 @@ Example
     
 
  
-## remove
+## removeAll
 
 
-    (this) remove(Function predicate=_.identity)
+    number removeAll(predicate)
 
 Removes all elements from array that predicate returns truthy for and returns an array of the removed elements. The predicate is invoked with three arguments: (value, index, array).
 
-Note: Unlike [filter](#filter), this method mutates array. Use pull to pull elements from an array by value.
+Note: Unlike [filter](#filter), this method mutates array. 
 
 Arguments
 
@@ -917,22 +951,39 @@ Arguments
 
 Returns
 
-    (Array): Returns the new array of removed elements.
+    Returns the number of removed elements.
 
 Example
 	
 
-    var myArray = [1, 2, 3, 4];
-    var evens = myArray.remove(function(n) {
-    return n % 2 == 0;
-    });
-    
+    var myArray = [1, 2, 3, 4,8,10,12,14];
+    var nb = myArray.removeAll(n=>n % 2 == 0);
     console.log(array);
     // => [1, 3]
     
-    console.log(evens);
-    // => [2, 4]
+    console.log(nb);
+    // => 6
 
+## removeAt
+
+    (this) removeAt(index)
+
+Removes a element from array at position index
+
+
+## removeRange
+
+    (this) removeRange(index, count)
+
+Remove elements from array between position index and index+count
+
+Returns the array without deleted elements
+
+Example
+
+    var ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    console.log(ints.removeRange(5, 5)); // [ 1, 2, 3, 4, 5, 11, 12]
+    console.log(ints); // [ 1, 2, 3, 4, 5, 11, 12 ]
 
 ## replace
 
@@ -965,6 +1016,7 @@ Example
             { x: 'one', y: 1, z: 1 },{ x: 2, y: 200 },{ x: 3, y: 300 },{ x: 4, y: 400 } ]
     */
 
+ 
 ## reverse
 
     Array reverse(Array array)

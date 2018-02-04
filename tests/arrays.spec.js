@@ -188,3 +188,7 @@ console.log("takeWhile", users4);
 
 console.log("union", [2, 2, 2, 3].union([1, 2]));
 // => [2, 1]
+
+console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x => x));
+console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x => x < 3));
+console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last());

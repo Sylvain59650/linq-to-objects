@@ -18,7 +18,7 @@ Implements [linq](https://docs.microsoft.com/en-us/dotnet/csharp/programming-gui
 
 OR
 
-  bower install linq-to-objects --save
+  yarn add linq-to-objects --save
 </code>
 
 # References in browser 

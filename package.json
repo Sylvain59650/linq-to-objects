@@ -1,6 +1,6 @@
 {
   "name": "linq-to-objects",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Linq for javascript",
   "main": "distrib/linq-to-objects.min.js",
   "directories": {

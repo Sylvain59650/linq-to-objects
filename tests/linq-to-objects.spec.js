@@ -1,6 +1,4 @@
-//require("../sources/Array.js");
-
-require("../distrib/Array.min.js");
+require("../distrib/linq-to-objects.min.js");
 
 var users = [
   { name: "Edward", age: 21 },
@@ -12,7 +10,7 @@ var users = [
   { name: "Manuel", age: 38 }
 ];
 
-console.log(users.where(x => x.name.startsWith("f")));
+console.log(users.where(x => x.name[0] === "f"));
 
 users2 = [
   { 'name': 'freddy', age: 60 },
@@ -87,6 +85,26 @@ console.log("intersect", [1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 8].intersect([9, 10, 1, 
 var chars = ["a", "b", "c", "d"];
 var csv = chars.aggregate((a, b) => a + ',' + b);
 console.log(csv); // Output a,b,c,d
+
+
+var a = [1, 2, 3];
+a.add(4, 5, 6).add(7, 8, 9);
+console.log(a);
+
+
+var b = [1, 2, 3];
+var c = [4, 5, 6, 7, 8, 9];
+b.addRange(c);
+console.log(b);
+
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+a.insertAt(3, 10);
+console.log(a);
+
+a.insertAt(999, 11);
+console.log(a);
+
 
 
 

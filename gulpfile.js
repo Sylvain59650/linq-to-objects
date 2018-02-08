@@ -45,14 +45,14 @@ gulp.task('clean', function() {
 
 
 
-gulp.task("Array.min.js", () => {
+gulp.task("linq-to-objects.min.js", () => {
   return gulp.src([
-      "sources/Array.js"
+      "sources/linq-to-objects.js"
     ])
-    .pipe(concat("Array.min.js"))
+    .pipe(concat("linq-to-objects.min.js"))
     .pipe(babel({
       presets: ["es2015"],
-      compact: true
+      compact: false
     }))
     //.pipe(uglify())
     //.on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
@@ -61,18 +61,34 @@ gulp.task("Array.min.js", () => {
 });
 
 
+gulp.task("tests-html-es2015.js", () => {
+  return gulp.src([
+      "tests/tests-html.js"
+    ])
+    .pipe(concat("tests-html-es2015.js"))
+    .pipe(babel({
+      presets: ["es2015"],
+      compact: false
+    }))
+    //.pipe(uglify())
+    //.on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    // .pipe(umd())
+    .pipe(gulp.dest("./tests"))
+});
 
-gulp.task('watch:Array.min.js', function() {
-  watch("./sources/Array.js", function() {
-    gulp.run('Array.min.js');
+
+
+gulp.task('watch:linq-to-objects.min.js', function() {
+  watch("./sources/linq-to-objects.js", function() {
+    gulp.run('linq-to-objects.min.js');
   });
 });
 
 
 
-gulp.task('default', ['Array.min.js']);
+gulp.task('default', ['linq-to-objects.min.js']);
 
 
 gulp.task('all', ['default']);
 
-gulp.task("watch", ["watch:Array.min.js"]);
+gulp.task("watch", ["watch:linq-to-objects.min.js"]);

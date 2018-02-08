@@ -10,10 +10,9 @@
   if (typeof define === 'function' && define.amd) {
     // define([""], factory);
   } else if (typeof exports === 'object') {
-    //module.exports = factory(require(""));
     module.exports = factory();
   } else {
-    root.Array = factory();
+    Array = factory();
   }
 }("ArrayModule", this, function() {
   'use strict';

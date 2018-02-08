@@ -12,19 +12,27 @@ Implements [linq](https://docs.microsoft.com/en-us/dotnet/csharp/programming-gui
 
 
 # Installation
-<code>
 
-  npm install linq-to-objects --save
+    npm install linq-to-objects --save
 
 OR
 
-  yarn add linq-to-objects --save
-</code>
+    yarn add linq-to-objects --save
+
+# References in NodeJs
+
+    require("linq-to-objects");
 
 # References in browser 
 <code>
 
   &lt;script src="./node_modules/linq-to-objects/distrib/linq-to-objects.min.js"&gt;&lt;/script&gt;
+</code>
+
+For IE (>=10), you need to add this script
+
+<code>
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"&gt;&lt;/script&gt;
 </code>
 
 

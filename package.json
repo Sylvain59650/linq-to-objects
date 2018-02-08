@@ -2,7 +2,7 @@
   "name": "linq-to-objects",
   "version": "0.9.0",
   "description": "Linq for javascript",
-  "main": "gulpfile.js",
+  "main": "distrib/linq-to-objects.min.js",
   "directories": {
     "doc": "docs",
     "test": "tests"
@@ -17,7 +17,9 @@
   "keywords": [
     "linq",
     "array",
-    "firstOrDefault"
+    "addRange", "aggregate", "average", "clear", "distinct", "firstOrDefault", "insertAt", "insertRangeAt",
+    "getRange", "groupBy", "innerJoin", "lastOrDefault", "orderBy", "orderByDescending",
+    "removeAll", "removeAt", "removeRange", "selectNew", "skipWhile", "takeWhile", "union", "where"
   ],
   "author": "Sylvain Longepée",
   "license": "MIT",

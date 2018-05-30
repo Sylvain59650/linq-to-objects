@@ -25,6 +25,13 @@ gulp.task("fn", () => {
     .pipe(gulp.dest(chemins.sources))
 });
 
+gulp.task("fn-separate", () => {
+  return gulp.src([
+      "sources/fn/*.js"
+    ])
+    .pipe(gulp.dest(chemins.distrib + "fn/"))
+});
+
 gulp.task("linq-to-objects.min.js", () => {
   return gulp.src([
       "sources/linq-to-objects.js"
@@ -73,6 +80,8 @@ gulp.task("watch:linq-to-objects.min.js", function() {
 
 
 gulp.task("default", ["linq-to-objects.min.js", "linq-to-objects-2015.min.js", "demo"]);
+
+gulp.task("release", ["fn", "fn-separate", "linq-to-objects.min.js", "linq-to-objects-2015.min.js", "demo"]);
 
 
 gulp.task("all", ["default"]);

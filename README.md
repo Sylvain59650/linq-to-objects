@@ -1,12 +1,10 @@
  <div class="Note" style="color:orange;font-style:italic">
  
-The lastest version of this document is available on [Github > linq-to-objects](https://github.com/Sylvain59650/linq-to-objects/blob/master/README.md)
+The lastest version of this document is available on [Github > linq-to-objects](https://sylvain59650.github.io/linq-to-objects/)
 </div>
 
-
-
-
 # linq-to-objects
+
 Implements [linq](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) for javascript
 
 <h1 class="title">linq-to-objects</h1>

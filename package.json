@@ -4,11 +4,10 @@
   "description": "Linq for javascript",
   "main": "distrib/linq-to-objects.min.js",
   "directories": {
-    "doc": "docs",
-    "test": "tests"
+    "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
@@ -45,21 +44,16 @@
   "bugs": {
     "url": "https://github.com/Sylvain59650/linq-to-objects/issues"
   },
-  "homepage": "https://github.com/Sylvain59650/linq-to-objects#readme",
+  "homepage": "https://sylvain59650.github.io/linq-to-objects/",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
-    "concat": "^1.0.3",
-    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
-    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-debug": "^3.2.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.0"
-  }
+  },
+  "dependencies": {}
 }

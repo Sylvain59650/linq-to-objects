@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <title>Linq to Objects</title>
   <link rel="stylesheet" type="text/css" href="css/github-light.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -59,37 +60,37 @@
     <h2><a id="user-content-add" class="anchor" name="add"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>add</h2>
     <pre><code>(this) add( (*) value)
     </code></pre>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>(*) value : a value
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>the current array with the value
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var a=[].add(5).add(6); // [5,6]
     </code></pre>
     <h2><a id="user-content-addrange" class="anchor" name="addrange"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>addRange</h2>
     <pre><code>(this) addRange( Array values)
     </code></pre>
-    <p>Arguments</p>
-    <p>values: a array of value</p>
-    <p>Returns</p>
+    <p class="arg" />
+    <pre><code>values: a array of value</code></pre>
+    <p class="return" />
     <pre><code>the current array with elements of values
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>    var a=[].addRange([5,6].addRange[7,8,9]); // [5,6,7,8,9]
     </code></pre>
     <h2><a id="user-content-clear" class="anchor" name="clear"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>clear</h2>
     <pre><code>(this) clear()
     </code></pre>
     <p>Remove all elements of the current array</p>
-    <p>Argument</p>
+    <p class="arg" />
     <pre><code>None
     </code></pre>
-    <p>Return</p>
+    <p class="return" />
     <pre><code>the current array cleared
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var a=[1,2,3,4,5];
     a.clear();
     console.log(a); // []
@@ -100,13 +101,13 @@
     <pre><code>Array concat( (...*) values)
     </code></pre>
     <p>Creates a new array concatenating array with any additional arrays and/or values.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>[values] (...*): The values to concatenate.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(Array): Returns the new concatenated array.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var myArray = [1];
     var other = myArray.concat(2, [3], [[4]]);
     
@@ -124,7 +125,7 @@
     accumulate: An accumulator function to be invoked on each element.
     resultSelector: A function to transform the final accumulator value into the result value.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>The transformed final accumulator value.
     </code></pre>
     <p>The following illustration shows the results of two different aggregation operations on a sequence of numbers. The first operation sums the numbers. The second operation returns the maximum value in the sequence.</p>
@@ -139,13 +140,15 @@
     <h2><a id="user-content-all" class="anchor" name="all"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>all</h2>
     <pre><code>all(predicate)
     </code></pre>
-    <p>Returns true if all the elements in a collection match a certain condition.</p>
+    <p class="return" />
+    <p> true if all the elements in a collection match a certain condition.</p>
     <pre><code>predicate: 
     </code></pre>
     <h2><a id="user-content-any" class="anchor" name="any"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>any</h2>
     <pre><code>any(predicate)
     </code></pre>
-    <p>Returns true if almost one element in a collection match a certain condition.</p>
+    <p class="return" />
+    <p> true if almost one element in a collection match a certain condition.</p>
     <pre><code>predicate:
     </code></pre>
     <h2><a id="user-content-average" class="anchor" name="average"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>average</h2>
@@ -160,13 +163,13 @@
     <pre><code>(this) clear()
     </code></pre>
     <p>Remove all elements of the current array</p>
-    <p>Argument</p>
+    <p class="arg" />
     <pre><code>None
     </code></pre>
-    <p>Return</p>
+    <p class="return" />
     <pre><code>the current array cleared
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var a=[1,2,3,4,5];
     a.clear();
     console.log(a); // []
@@ -174,7 +177,8 @@
     <h2><a id="user-content-count" class="anchor" name="count"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>count</h2>
     <pre><code>count(predicate)
     </code></pre>
-    <p>Returns the number of elements in a sequence.</p>
+    <p class="return" />
+    <p>the number of elements in a sequence.</p>
     <pre><code>predicate:A sequence that contains elements to be counted.
     
     
@@ -185,7 +189,8 @@
     <h2><a id="user-content-distinct" class="anchor" name="distinct"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>distinct</h2>
     <pre><code>distinct(predicate)
     </code></pre>
-    <p>Returns distinct elements from a sequence.</p>
+    <p>Returns</p>
+    <p>distinct elements from a sequence.</p>
     <pre><code>var ages = [21, 46, 46, 55.3, 17, 21, 55.4, 55.5, 55.4, 55.3];
     console.log(ages.distinct());  // [ 21, 46, 55.3, 17, 55.4, 55.5 ]
     console.log(ages.distinct(Math.floor));  // [ 21, 46, 55, 17 ]
@@ -193,11 +198,12 @@
     <h2><a id="user-content-equals" class="anchor" name="equals"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>equals</h2>
     <pre><code>boolean equals(Array anotherArray)
     </code></pre>
-    <p>Argument</p>
+    <p class="arg" />
     <pre><code>anotherArray : a array
     </code></pre>
-    <p>Returns true if the array contains same value of anotherArray in same position, else false</p>
-    <p>Example</p>
+    <p class="return" />
+    <p>true if the array contains same value of anotherArray in same position, else false</p>
+    <p class="example" />
     <pre><code>var items = [
         { name: "Edward", value: 21 },
         { name: "Sharpe", value: 37 },
@@ -214,15 +220,15 @@
     <h2><a id="user-content-filter-" class="anchor" name="filter"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>filter
       <img src="img/chrome.png" />
     </h2>
-    <p>Array filter(predicate)</p>
+    <pre><code>Array filter(predicate)</code></pre>
     <p>Iterates over elements of collection, returning an array of all elements predicate returns truthy for. The predicate is invoked with three arguments: (value, index|key, collection).</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code> predicate: The function invoked per iteration.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(Array): Returns the new filtered array.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var users = [
         { 'user': 'barney', 'age': 36, 'active': true },
         { 'user': 'fred',   'age': 40, 'active': false }
@@ -234,16 +240,16 @@
     <h2><a id="user-content-find-" class="anchor" name="find"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find
       <img src="img/chrome.png" />
     </h2>
-    <p>Array find(predicate, number fromIndex=0)</p>
+    <pre><code>Array find(predicate, number fromIndex=0)</code></pre>
     <p>Iterates over elements of collection, returning the first element predicate returns truthy for. The predicate is invoked with three arguments: (value, index|key, collection).</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>predicate: The function invoked per iteration.
     fromIndex: The index to search from.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(*): Returns the matched element, else undefined.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var users = [
         { 'user': 'barney',  'age': 36, 'active': true },
         { 'user': 'fred',    'age': 40, 'active': false },
@@ -256,15 +262,15 @@
     <h2><a id="user-content-findindex-" class="anchor" name="findindex"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>findIndex
       <img src="img/chrome.png" />
     </h2>
-    <p>number findIndex(predicate)</p>
+    <pre><code>number findIndex(predicate)</code></pre>
     <p>This method is like <a href="#find">find</a> except that it returns the index of the first element predicate returns truthy for instead of the element itself.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>predicate: The function invoked per iteration
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(number): Returns the index of the found element, else -1.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var users = [
     { 'user': 'barney',  'active': false },
     { 'user': 'fred',    'active': false },
@@ -275,28 +281,28 @@
     // =&gt; 0
     </code></pre>
     <h2><a id="user-content-findlast" class="anchor" name="findlast"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>findLast</h2>
-    <p>(*) findLast(predicate)</p>
+    <pre><code>(*) findLast(predicate)</code></pre>
     <p>This method is like <a href="#find">find</a> except that it iterates over elements of collection from right to left.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>predicate: The function invoked per iteration
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(*): Returns the matched element, else null.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>[1, 2, 3, 4].findLast(n=&gt;n % 2 == 1);
     // =&gt; 3
     </code></pre>
     <h2><a id="user-content-findlastindex" class="anchor" name="findlastindex"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>findLastIndex</h2>
-    <p>number findLastIndex(predicate)</p>
+    <pre><code>number findLastIndex(predicate)</code></pre>
     <p>This method is like <a href="#findindex">findIndex</a> except that it iterates over elements of collection from right to left.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>predicate: The function invoked per iteration
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(number): Returns the index of the found element, else -1.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var users = [
     { 'user': 'barney',  'active': true },
     { 'user': 'fred',    'active': false },
@@ -309,11 +315,11 @@
     <h2><a id="user-content-first" class="anchor" name="first"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>first</h2>
     <pre><code>first(predicate)
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(*): Returns the first element in a sequence that satisfies a specified condition.
     throws an exception if source contains no elements. To instead return a default value when the source sequence is empty, use the firstOrDefault method.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>[1, 2, 3].first();
     // =&gt; 1
     
@@ -328,11 +334,12 @@
     <h2><a id="user-content-firstordefault" class="anchor" name="firstordefault"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>firstOrDefault</h2>
     <pre><code>firstOrDefault(predicate,defaultValue)
     </code></pre>
-    <p>Returns the first element of a sequence that satisfies a specified condition, or a default value if no element is found.</p>
+    <p class="return" />
+    <p>the first element of a sequence that satisfies a specified condition, or a default value if no element is found.</p>
     <pre><code>predicate:
     defaultValue:
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var names = ["Hartono Tommy", "Adams Terry","Andersen Henriette Thaulow","Hedlund Magnus", "Ito Shu"];
     console.log(names.firstOrDefault(name =&gt; name.length &gt; 20)); // "Andersen Henriette Thaulow"
     console.log(names.firstOrDefault(name =&gt; name.length &gt; 200, "not found"));  // "not found"
@@ -342,13 +349,12 @@
     </code></pre>
     <p>Iterates over elements of collection and invokes iteratee for each element. The iteratee is invoked with three arguments: (value, index|key, collection). Iteratee functions may exit iteration early by explicitly returning false.</p>
     <p>Note: As with other "Collections" methods, objects with a "length" property are iterated like arrays. To avoid this behavior use forIn or forOwn for object iteration.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>action : The function invoked per iteration.
     </code></pre>
-    <p>Returns</p>
-    <pre><code>None.
-    </code></pre>
-    <p>Example</p>
+    <p class="return" />
+    <p>None</p>
+    <p class="example" />
     <pre><code>[1, 2].forEach(function(value) {
         console.log(value);
     });
@@ -358,14 +364,14 @@
     <pre><code>Array getRange(number start, number end)
     </code></pre>
     <p>returns a new array whose elements are those of the original array between the start and end positions</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>start: start position in the array
     end: end position in the array
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>a new array whose elements are those of the original array between the start and end positions
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>var a=[0,1,2,3,4,5,6,7,8,9];
     var b=a.getRange(5,8);
     console.log(a);  // [0,1,2,3,4,5,6,7,8,9]
@@ -376,13 +382,13 @@
     </code></pre>
     <p>Groups the elements of a sequence.</p>
     <p>Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. The elements of each group are projected by using a specified function.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>keySelector : The iteratee to transform keys.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(Object): Returns the composed aggregate object.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>console.log([6.1, 4.2, 6.3].groupBy(Math.floor));
     /*
      [ { key: '4', elements: [ 4.2 ] },
@@ -396,14 +402,14 @@
     <pre><code>boolean includes( (*) value, number fromIndex=0)
     </code></pre>
     <p>Checks if value is in collection. If collection is a string, it's checked for a substring of value, otherwise SameValueZero is used for equality comparisons. If fromIndex is negative, it's used as the offset from the end of collection.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>value: The value to search for.
     fromIndex: The index to search from.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(boolean): Returns true if value is found, else false.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>[1, 2, 3].includes( 1);
     // =&gt; true
     
@@ -413,13 +419,13 @@
     <h2><a id="user-content-includesall" class="anchor" name="includesall"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>includesAll</h2>
     <pre><code>boolean includesAll(Array array)
     </code></pre>
-    <p>Argument</p>
+    <p class="arg" />
     <pre><code>array : a array
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>true if the array contains all value of array, else false
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>[1, 2, 3, "a", "b", "c"].includesAll([1, 2, 3, "a", "b", "c"]); // true
     [1, 2, 3, "a", "b", "c"].includesAll([1, 2, 3, "d", "a", "b", "c"]); // false
     </code></pre>
@@ -432,14 +438,14 @@
     <pre><code>number indexOf(any value, number fromIndex=0)
     </code></pre>
     <p>Gets the index at which the first occurrence of value is found in array using SameValueZero for equality comparisons. If fromIndex is negative, it's used as the offset from the end of array.</p>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>value (*): The value to search for.
     fromIndex: The index to search from.
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>(number): Returns the index of the matched value, else -1.
     </code></pre>
-    <p>Example</p>
+    <p class="example" />
     <pre><code>[1, 2, 1, 2].indexOf(2);
     // =&gt; 1
     
@@ -449,16 +455,16 @@
     <h2><a id="user-content-innerjoin" class="anchor" name="innerjoin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>innerJoin</h2>
     <pre><code>(this) innerJoin(Array array,string condition,[string] fields)
     </code></pre>
-    <p>Arguments</p>
+    <p class="arg" />
     <pre><code>    array : the array to inner join
         condition: a left field = a right field
         fieds : array of field in right array to extends left array
     </code></pre>
-    <p>Returns</p>
+    <p class="return" />
     <pre><code>    (Array): return a new array with fields of right array and left array whose matches with condition
     </code></pre>
-    <p>Examples</p>
-    <pre><code>var items = [
+    <p class="example">
+      <pre><code>var items = [
         { name: "Edward", value: 21 },
         { name: "Sharpe", value: 37 },
         { name: "Alfred", value: 45 },
@@ -487,109 +493,111 @@
         { name: 'Paul', value: 13, job: 'electrician', exp: 'senior' },
         { name: 'Manuel', value: 38, job: 'florist', exp: 'junior' } ] */
     </code></pre>
-    <h2><a id="user-content-insertat" class="anchor" name="insertat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insertAt</h2>
-    <pre><code>(this) insertAt(number position, any value)
+      <h2><a id="user-content-insertat" class="anchor" name="insertat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insertAt</h2>
+      <pre><code>(this) insertAt(number position, any value)
     </code></pre>
-    <p>Insert a value at the position of the current array. If position is greater than array length, then insert at last position.</p>
-    <p>Argument</p>
-    <pre><code>position: position where insert the value in the array
+      <p>Insert a value at the position of the current array. If position is greater than array length, then insert at last position.</p>
+      <p class="arg" />
+      <pre><code>position: position where insert the value in the array
     value: the value to insert
     </code></pre>
-    <p>Returns</p>
-    <pre><code>the current array with new values
+      <p class="return" />
+      <pre><code>the current array with new values
     </code></pre>
-    <p>Example</p>
-    <pre><code>var a=[7,8,9,10];
+      <p class="example" />
+      <pre><code>var a=[7,8,9,10];
     a.insertAt(0,11);
     console.log(a); // [11,7,8,9,10]
     
     a.insertAt(50,12).insertAt(4,13);
     console.log(a); // [11,7,8,9,13,10,12]    
     </code></pre>
-    <h2><a id="user-content-insertrangeat" class="anchor" name="insertrangeat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insertRangeAt</h2>
-    <pre><code>(this) insertRangeAt(number position, Array values)
+      <h2><a id="user-content-insertrangeat" class="anchor" name="insertrangeat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insertRangeAt</h2>
+      <pre><code>(this) insertRangeAt(number position, Array values)
     </code></pre>
-    <p>Insert elements of values at the position of the current array. If position is greater than array length, then insert at last position.</p>
-    <p>Argument</p>
-    <pre><code>position: position where insert the value in the array
+      <p>Insert elements of values at the position of the current array. If position is greater than array length, then insert at last position.</p>
+      <p class="arg" />
+      <pre><code>position: position where insert the value in the array
     values: element of array to insert
     </code></pre>
-    <p>Returns</p>
-    <pre><code>the current array with new values
+      <p class="return" />
+      <pre><code>the current array with new values
     </code></pre>
-    <p>Example</p>
-    <pre><code>var a=[7,8,9,10];
+      <p class="example" />
+      <pre><code>var a=[7,8,9,10];
     
     a.insertRangeAt(2,[12,13,14,15,16]);
     console.log(a); // [7,8,12,13,14,15,16]    
     </code></pre>
-    <h2><a id="user-content-intersect" class="anchor" name="intersect"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>intersect</h2>
-    <pre><code>intersect(second,comparer)
+      <h2><a id="user-content-intersect" class="anchor" name="intersect"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>intersect</h2>
+      <pre><code>intersect(second,comparer)
     </code></pre>
-    <p>Produces the set intersection of two sequences by using the specified comparer to compare values.</p>
-    <pre><code>console.log("intersect", [1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 8].intersect([9, 10, 1, 3]));  // [1,3]
+      <p>Produces the set intersection of two sequences by using the specified comparer to compare values.</p>
+      <p class="example" />
+      <pre><code>[1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 8].intersect([9, 10, 1, 3]);  // [1,3]
     </code></pre>
-    <h2><a id="user-content-join-" class="anchor" name="join"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>join
-      <img src="img/js.png" />
-    </h2>
-    <pre><code>string join(string separator=',')
+      <h2><a id="user-content-join-" class="anchor" name="join"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>join
+        <img src="img/js.png" />
+      </h2>
+      <pre><code>string join(string separator=',')
     </code></pre>
-    <p>Converts all elements in array into a string separated by separator.</p>
-    <p>Arguments</p>
-    <pre><code>separator: The string separator.
+      <p>Converts all elements in array into a string separated by separator.</p>
+      <p class="arg" />
+      <pre><code>separator: The string separator.
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(string): Returns the joined string.
+      <p class="return" />
+      <pre><code>(string): Returns the joined string.
     </code></pre>
-    <p>Example</p>
-    <pre><code>['a', 'b', 'c'].join('~');
+      <p class="example" />
+      <pre><code>['a', 'b', 'c'].join('~');
     // =&gt; 'a~b~c'
     </code></pre>
-    <h2><a id="user-content-last" class="anchor" name="last"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>last</h2>
-    <pre><code>any last(predicate)
+      <h2><a id="user-content-last" class="anchor" name="last"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>last</h2>
+      <pre><code>any last(predicate)
     </code></pre>
-    <p>Returns the last element from a collection, or the last element that satisfies a condition. last has two overload methods. One overload method doesn't take any input parameter and returns last element from the collection. Second overload method takes
-      a lambda expression to specify a condition and returns last element that satisfies the specified condition. method returns the last element from a collection, or the last element that satisfies the specified condition.If a given collection is empty
-      or does not include any element that satisfied the condition then it will throw InvalidOperation exception.</p>
-    <p>Arguments</p>
-    <pre><code>predicate:
+      <p>Returns the last element from a collection, or the last element that satisfies a condition. last has two overload methods. One overload method doesn't take any input parameter and returns last element from the collection. Second overload method
+        takes a lambda expression to specify a condition and returns last element that satisfies the specified condition. method returns the last element from a collection, or the last element that satisfies the specified condition.If a given collection
+        is empty or does not include any element that satisfied the condition then it will throw InvalidOperation exception.</p>
+      <p class="arg" />
+      <pre><code>predicate:
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(*): Returns the last element from a collection, or the last element that satisfies a condition.
+      <p class="return" />
+      <pre><code>(*): Returns the last element from a collection, or the last element that satisfies a condition.
     </code></pre>
-    <p>Example</p>
-    <pre><code>console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x =&gt; x));
+      <p class="example" />
+      <pre><code>console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x =&gt; x));
     console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x =&gt; x &lt; 3));
     console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last());
     </code></pre>
-    <h2><a id="user-content-lastindexof" class="anchor" name="lastindexof"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lastIndexOf</h2>
-    <pre><code>number lastIndexOf(value, number fromIndex=array.length-1)
+      <h2><a id="user-content-lastindexof" class="anchor" name="lastindexof"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lastIndexOf</h2>
+      <pre><code>number lastIndexOf(value, number fromIndex=array.length-1)
     </code></pre>
-    <p>This method is like <a href="#indexof">indexOf</a> except that it iterates over elements of array from right to left.</p>
-    <p>Arguments</p>
-    <pre><code>value: The value to search for.
+      <p>This method is like <a href="#indexof">indexOf</a> except that it iterates over elements of array from right to left.</p>
+      <p class="arg" />
+      <pre><code>value: The value to search for.
     fromIndex: The index to search from.
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(number): Returns the index of the matched value, else -1.
+      <p class="return" />
+      <pre><code>(number): Returns the index of the matched value, else -1.
     </code></pre>
-    <p>Example</p>
-    <pre><code>[1, 2, 1, 2].lastIndexOf(2);
+      <p class="example" />
+      <pre><code>[1, 2, 1, 2].lastIndexOf(2);
     // =&gt; 3
     
     // Search from the `fromIndex`.
     [1, 2, 1, 2].lastIndexOf(2, 2);
     // =&gt; 1
     </code></pre>
-    <h2><a id="user-content-leftjoin" class="anchor" name="leftjoin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>leftJoin</h2>
-    <pre><code>Array leftJoin(Array array,string condition,[string] fields)
+      <h2><a id="user-content-leftjoin" class="anchor" name="leftjoin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>leftJoin</h2>
+      <pre><code>Array leftJoin(Array array,string condition,[string] fields)
     </code></pre>
-    <p>Arguments array : the array to left join</p>
-    <p>Returns</p>
-    <pre><code>    (Array): return the current array with fields of right array whose matches with condition
+      <p class="arg">
+        <pre><code>array : the array to left join</code></pre>
+        <p class="return" />
+        <pre><code>    (Array): return the current array with fields of right array whose matches with condition
     </code></pre>
-    <p>Examples</p>
-    <pre><code>var items = [
+        <p class="example">Examples</p>
+        <pre><code>var items = [
         { name: "Edward", value: 21 },
         { name: "Sharpe", value: 37 },
         { name: "Alfred", value: 45 },
@@ -618,37 +626,39 @@
         { name: 'Manuel', value: 38, job: 'florist' } 
     ]*/
     </code></pre>
-    <h2><a id="user-content-max" class="anchor" name="max"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>max</h2>
-    <pre><code>max(selector,defaultValue)
+        <h2><a id="user-content-max" class="anchor" name="max"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>max</h2>
+        <pre><code>max(selector,defaultValue)
     </code></pre>
-    <p>Returns the maximum value in a sequence of values.</p>
-    <pre><code>var numbers = [9, 34, 65, 92, 87, 435, 3, 54, 83, 23, 87, 435, 67, 12,19];
-    console.log(numbers.max(number =&gt; number)); // 435
-    console.log(numbers.max()); // 435
-    console.log([].max(x=&gt;x,-50)); // -50
+        <p class="return" />
+        <p>the maximum value in a sequence of values.</p>
+        <pre><code>var numbers = [9, 34, 65, 92, 87, 435, 3, 54, 83, 23, 87, 435, 67, 12,19];
+    numbers.max(number =&gt; number); // 435
+    numbers.max(); // 435
+    [].max(x=&gt;x,-50); // -50
     </code></pre>
-    <h2><a id="user-content-min" class="anchor" name="min"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>min</h2>
-    <pre><code>min(selector,defaultValue)
+        <h2><a id="user-content-min" class="anchor" name="min"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>min</h2>
+        <pre><code>min(selector,defaultValue)
     </code></pre>
-    <p>Returns the minimum value in a sequence of values.</p>
-    <pre><code>var numbers = [9, 34, 65, 92, 87, 435, 3, 54, 83, 23, 87, 435, 67, 12,19];
-    console.log(numbers.min(number =&gt; number)); // 3
-    console.log(numbers.min()); // 3
-    console.log([].min(x=&gt;x,-50)); // -50
+        <p class="return" />
+        <p>Returns the minimum value in a sequence of values.</p>
+        <pre><code>var numbers = [9, 34, 65, 92, 87, 435, 3, 54, 83, 23, 87, 435, 67, 12,19];
+    numbers.min(number =&gt; number); // 3
+    numbers.min(); // 3
+    [].min(x=&gt;x,-50); // -50
     </code></pre>
-    <h2><a id="user-content-orderby" class="anchor" name="orderby"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>orderBy</h2>
-    <pre><code>Array orderBy(keySelector,comparer)
+        <h2><a id="user-content-orderby" class="anchor" name="orderby"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>orderBy</h2>
+        <pre><code>Array orderBy(keySelector,comparer)
     </code></pre>
-    <p>sort the array according to the field keySelector</p>
-    <p>Arguments</p>
-    <pre><code>keySelector:
+        <p>sort the array according to the field keySelector</p>
+        <p class="arg" />
+        <pre><code>keySelector:
     comparer:
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns the new sorted array.
+        <p class="return" />
+        <pre><code>(Array): Returns the new sorted array.
     </code></pre>
-    <p>Example</p>
-    <pre><code>var users = [
+        <p class="example" />
+        <pre><code>var users = [
         { 'user': 'fred',   'age': 48 },
         { 'user': 'barney', 'age': 34 },
         { 'user': 'fred',   'age': 40 },
@@ -663,19 +673,19 @@
         { 'user': 'fred',   'age': 48 },
     ] */
     </code></pre>
-    <h2><a id="user-content-orderbydescending" class="anchor" name="orderbydescending"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>orderByDescending</h2>
-    <pre><code>Array orderByDescending(keySelector,comparer)
+        <h2><a id="user-content-orderbydescending" class="anchor" name="orderbydescending"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>orderByDescending</h2>
+        <pre><code>Array orderByDescending(keySelector,comparer)
     </code></pre>
-    <p>sort the array according to the field keySelector</p>
-    <p>Arguments</p>
-    <pre><code>keySelector:
+        <p>sort the array according to the field keySelector</p>
+        <p class="arg" />
+        <pre><code>keySelector:
     comparer:
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns the new sorted array.
+        <p class="return" />
+        <pre><code>(Array): Returns the new sorted array.
     </code></pre>
-    <p>Example</p>
-    <pre><code>var users = [
+        <p class="example" />
+        <pre><code>var users = [
         { 'user': 'fred',   'age': 48 },
         { 'user': 'barney', 'age': 34 },
         { 'user': 'fred',   'age': 40 },
@@ -690,49 +700,49 @@
          { 'user': 'barney', 'age': 34 },
      ];*/
     </code></pre>
-    <h2><a id="user-content-push-" class="anchor" name="push"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>push
-      <img src="img/js.png" />
-    </h2>
-    <pre><code>(this) push(value)
+        <h2><a id="user-content-push-" class="anchor" name="push"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>push
+          <img src="img/js.png" />
+        </h2>
+        <pre><code>(this) push(value)
     
     push() adds one or more elements to the end of an array and returns the resulting length of the array.
     </code></pre>
-    <p>Argument</p>
-    <pre><code>value: a value
+        <p class="arg" />
+        <pre><code>value: a value
     </code></pre>
-    <p>Example</p>
-    <pre><code>var myArray = new Array('1', '2');
+        <p class="example" />
+        <pre><code>var myArray = new Array('1', '2');
     myArray.push('3'); // myArray is now ["1", "2", "3"]
     </code></pre>
-    <h2><a id="user-content-reduce-" class="anchor" name="reduce"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reduce
-      <img src="img/js.png" />
-    </h2>
-    <pre><code>any reduce(Function iteratee=_.identity, any accumulator)
+        <h2><a id="user-content-reduce-" class="anchor" name="reduce"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reduce
+          <img src="img/js.png" />
+        </h2>
+        <pre><code>any reduce(Function iteratee=_.identity, any accumulator)
     </code></pre>
-    <p>Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee, where each successive invocation is supplied the return value of the previous. If accumulator is not given, the first element of collection
-      is used as the initial value. The iteratee is invoked with four arguments: (accumulator, value, index|key, collection).</p>
-    <p>Returns</p>
-    <pre><code>(*): Returns the accumulated value.
+        <p>Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee, where each successive invocation is supplied the return value of the previous. If accumulator is not given, the first element of
+          collection is used as the initial value. The iteratee is invoked with four arguments: (accumulator, value, index|key, collection).</p>
+        <p class="return" />
+        <pre><code>(*): Returns the accumulated value.
     </code></pre>
-    <p>Example</p>
-    <pre><code>[1, 2].reduce(function(sum, n) {
+        <p class="example" />
+        <pre><code>[1, 2].reduce(function(sum, n) {
         return sum + n;
     }, 0);
     // =&gt; 3
     </code></pre>
-    <h2><a id="user-content-removeall" class="anchor" name="removeall"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeAll</h2>
-    <pre><code>number removeAll(predicate)
+        <h2><a id="user-content-removeall" class="anchor" name="removeall"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeAll</h2>
+        <pre><code>number removeAll(predicate)
     </code></pre>
-    <p>Removes all elements from array that predicate returns truthy for and returns an array of the removed elements. The predicate is invoked with three arguments: (value, index, array).</p>
-    <p>Note: Unlike <a href="#filter">filter</a>, this method mutates array.</p>
-    <p>Arguments</p>
-    <pre><code>predicate: The function invoked per iteration.
+        <p>Removes all elements from array that predicate returns truthy for and returns an array of the removed elements. The predicate is invoked with three arguments: (value, index, array).</p>
+        <p>Note: Unlike <a href="#filter">filter</a>, this method mutates array.</p>
+        <p class="arg" />
+        <pre><code>predicate: The function invoked per iteration.
     </code></pre>
-    <p>Returns</p>
-    <pre><code>Returns the number of removed elements.
+        <p class="return" />
+        <pre><code>Returns the number of removed elements.
     </code></pre>
-    <p>Example</p>
-    <pre><code>var myArray = [1, 2, 3, 4,8,10,12,14];
+        <p class="example" />
+        <pre><code>var myArray = [1, 2, 3, 4,8,10,12,14];
     var nb = myArray.removeAll(n=&gt;n % 2 == 0);
     console.log(array);
     // =&gt; [1, 3]
@@ -740,42 +750,43 @@
     console.log(nb);
     // =&gt; 6
     </code></pre>
-    <h2><a id="user-content-removeat" class="anchor" name="removeat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeAt</h2>
-    <pre><code>(this) removeAt(index)
+        <h2><a id="user-content-removeat" class="anchor" name="removeat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeAt</h2>
+        <pre><code>(this) removeAt(index)
     </code></pre>
-    <p>Removes a element from array at position index</p>
-    <p>Returns</p>
-    <pre><code>Returns the array without removed element
+        <p>Removes a element from array at position index</p>
+        <p class="return" />
+        <pre><code>Returns the array without removed element
     </code></pre>
-    <p>Example</p>
-    <pre><code>var ints = [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        <p class="example" />
+        <pre><code>var ints = [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     console.log(ints.removeAt(5)); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
     console.log(ints); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
     </code></pre>
-    <h2><a id="user-content-removerange" class="anchor" name="removerange"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeRange</h2>
-    <pre><code>(this) removeRange(index, count)
+        <h2><a id="user-content-removerange" class="anchor" name="removerange"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeRange</h2>
+        <pre><code>(this) removeRange(index, count)
     </code></pre>
-    <p>Remove elements from array between position index and index+count</p>
-    <p>Returns the array without deleted elements</p>
-    <p>Example</p>
-    <pre><code>var ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        <p>Remove elements from array between position index and index+count</p>
+        <p class="return" />
+        <p> the array without deleted elements</p>
+        <p class="example" />
+        <pre><code>var ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     console.log(ints.removeRange(5, 5)); // [ 1, 2, 3, 4, 5, 11, 12]
     console.log(ints); // [ 1, 2, 3, 4, 5, 11, 12 ]
     </code></pre>
-    <h2><a id="user-content-replace" class="anchor" name="replace"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace</h2>
-    <pre><code>(this) replace(any value,any newValue)
+        <h2><a id="user-content-replace" class="anchor" name="replace"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace</h2>
+        <pre><code>(this) replace(any value,any newValue)
     
     Replace the element of the array whose match with value and replace by newValue
     </code></pre>
-    <p>Argument</p>
-    <pre><code>value: the value search for
+        <p class="arg" />
+        <pre><code>value: the value search for
     newValue: the value to replace with
     </code></pre>
-    <p>Returns</p>
-    <pre><code>the current array with replaced value
+        <p class="return" />
+        <pre><code>the current array with replaced value
     </code></pre>
-    <p>Example</p>
-    <pre><code>objs = [
+        <p class="example" />
+        <pre><code>objs = [
         { x: 1, y: 1 }, { x: 2, y: 2 }, { x: 3, y: 3 }, { x: 4, y: 4 },
         { x: 1, y: 10 }, { x: 2, y: 20 }, { x: 3, y: 30 }, { x: 4, y: 40 },
         { x: 1, y: 100 }, { x: 2, y: 200 }, { x: 3, y: 300 }, { x: 4, y: 400 }
@@ -789,19 +800,19 @@
             { x: 'one', y: 1, z: 1 },{ x: 2, y: 200 },{ x: 3, y: 300 },{ x: 4, y: 400 } ]
     */
     </code></pre>
-    <h2><a id="user-content-reverse" class="anchor" name="reverse"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reverse</h2>
-    <pre><code>Array reverse(Array array)
+        <h2><a id="user-content-reverse" class="anchor" name="reverse"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reverse</h2>
+        <pre><code>Array reverse(Array array)
     </code></pre>
-    <p>Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.</p>
-    <p>Note: This method mutates array and is based on reverse.</p>
-    <p>Arguments</p>
-    <pre><code>array (Array): The array to modify.
+        <p>Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.</p>
+        <p>Note: This method mutates array and is based on reverse.</p>
+        <p class="arg" />
+        <pre><code>array (Array): The array to modify.
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns array.
+        <p class="return" />
+        <pre><code>(Array): Returns array.
     </code></pre>
-    <p>Example</p>
-    <pre><code>var myArray = [1, 2, 3];
+        <p class="example" />
+        <pre><code>var myArray = [1, 2, 3];
     
     myArray.reverse(array);
     // =&gt; [3, 2, 1]
@@ -809,40 +820,20 @@
     console.log(array);
     // =&gt; [3, 2, 1]
     </code></pre>
-    <h2><a id="user-content-slice-" class="anchor" name="slice"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>slice
-      <img src="img/js.png" />
-    </h2>
-    <pre><code>Array slice(number start, number end=array.length)
+
+        <h2><a id="user-content-sort-" class="anchor" name="sort"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sort
+          <img src="img/js.png" />
+        </h2>
+        <pre><code>(this) sort(comparaison)
     </code></pre>
-    <p>Creates a slice of array from start up to, but not including, end.</p>
-    <p>Note: This method is used instead of slice to ensure dense arrays are returned.</p>
-    <p>Arguments</p>
-    <pre><code>start: The start position.
-    end: The end position.
+        <p class="arg" />
+        <pre><code>comparaison: a comparaison fonction
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns the slice of array.
+        <p class="return" />
+        <pre><code>current array sorted
     </code></pre>
-    <p>Example</p>
-    <pre><code>var myArray = new Array('a', 'b', 'c', 'd', 'e');
-    myArray = myArray.slice(1, 4); 
-    // starts at index 1 
-    // and extracts all elements until index 3, 
-    // returning [ "b", "c", "d"]
-    </code></pre>
-    <h2><a id="user-content-sort-" class="anchor" name="sort"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sort
-      <img src="img/js.png" />
-    </h2>
-    <pre><code>(this) sort(comparaison)
-    </code></pre>
-    <p>Argument</p>
-    <pre><code>comparaison: a comparaison fonction
-    </code></pre>
-    <p>Return</p>
-    <pre><code>current array sorted
-    </code></pre>
-    <p>Example</p>
-    <pre><code>var items = [
+        <p class="example" />
+        <pre><code>var items = [
         { name: "Edward", value: 21 },
         { name: "Sharpe", value: 37 },
         { name: "And", value: 45 },
@@ -858,31 +849,19 @@
     //  { name: 'Zeros', value: 37 },
     //  { name: 'And', value: 45 } ]
     </code></pre>
-    <h2><a id="user-content-splice-" class="anchor" name="splice"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>splice
-      <img src="img/js.png" />
-    </h2>
-    <pre><code>(*) splice(number index, number count_to_remove, (...any) newElements) 
+
+        <h2><a id="user-content-take" class="anchor" name="take"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>take</h2>
+        <pre><code>Array take(number n=1)
     </code></pre>
-    <p>removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.</p>
-    <p>Example</p>
-    <pre><code>var myArray = new Array('1', '2', '3', '4', '5');
-    myArray.splice(1, 3, 'a', 'b', 'c', 'd'); 
-    // myArray is now ["1", "a", "b", "c", "d", "5"]
-    // This code started at index one (or where the "2" was), 
-    // removed 3 elements there, and then inserted all consecutive elements in its place.
+        <p>Creates a slice of array with n elements taken from the beginning.</p>
+        <p class="arg" />
+        <pre><code>n: The number of elements to take.
     </code></pre>
-    <h2><a id="user-content-take" class="anchor" name="take"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>take</h2>
-    <pre><code>Array take(number n=1)
+        <p class="return" />
+        <pre><code>(Array): Returns the slice of array.
     </code></pre>
-    <p>Creates a slice of array with n elements taken from the beginning.</p>
-    <p>Arguments</p>
-    <pre><code>n: The number of elements to take.
-    </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns the slice of array.
-    </code></pre>
-    <p>Example</p>
-    <pre><code>[1, 2, 3].take();
+        <p class="example" />
+        <pre><code>[1, 2, 3].take();
     // =&gt; [1]
     
     [1, 2, 3].take(2);
@@ -894,18 +873,18 @@
     [1, 2, 3].take( 0);
     // =&gt; []
     </code></pre>
-    <h2><a id="user-content-takewhile" class="anchor" name="takewhile"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeWhile</h2>
-    <pre><code>Array takeWhile(Function predicate=_.identity)
+        <h2><a id="user-content-takewhile" class="anchor" name="takewhile"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeWhile</h2>
+        <pre><code>Array takeWhile(Function predicate=_.identity)
     </code></pre>
-    <p>Creates a slice of array with elements taken from the beginning. Elements are taken until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).</p>
-    <p>Arguments</p>
-    <pre><code>predicate: The function invoked per iteration.
+        <p>Creates a slice of array with elements taken from the beginning. Elements are taken until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).</p>
+        <p class="arg" />
+        <pre><code>predicate: The function invoked per iteration.
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns the slice of array.
+        <p class="return" />
+        <pre><code>(Array): Returns the slice of array.
     </code></pre>
-    <p>Example</p>
-    <pre><code>var users = [
+        <p class="example" />
+        <pre><code>var users = [
         { 'user': 'barney', 'active': false },
         { 'user': 'fred', 'active': false },
         { 'user': 'pebbles', 'active': true },
@@ -921,20 +900,53 @@
     ]
     */
     </code></pre>
-    <h2><a id="user-content-union" class="anchor" name="union"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>union</h2>
-    <pre><code>Array union(second, comparer)
+        <h2><a id="user-content-union" class="anchor" name="union"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>union</h2>
+        <pre><code>Array union(second, comparer)
     </code></pre>
-    <p>Creates an array of unique values from all given arrays using comparer for equality comparisons.</p>
-    <p>Arguments</p>
-    <pre><code>second: The arrays to inspect
+        <p>Creates an array of unique values from all given arrays using comparer for equality comparisons.</p>
+        <p class="arg" />
+        <pre><code>second: The arrays to inspect
     comparer:the function comparer 2 items
     </code></pre>
-    <p>Returns</p>
-    <pre><code>(Array): Returns the new array of combined values.
+        <p class="return" />
+        <pre><code>(Array): Returns the new array of combined values.
     </code></pre>
-    <p>Example</p>
-    <pre><code>console.log("union", [2, 2, 2, 3].union([1, 2]));
+        <p class="example" />
+        <pre><code>console.log("union", [2, 2, 2, 3].union([1, 2]));
     // =&gt; [2, 3,1]
+    </code></pre>
+
+        <h2><a class="anchor" name="whileindex"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>whileIndex</h2>
+        <pre><code>Number whileIndex(Function predicate)
+    </code></pre>
+        <p class="arg" />
+        <pre><code>predicate: The function invoked per iteration.
+    </code></pre>
+        <p class="return" />
+        <pre><code>(Number): Returns the first index of element of array where predicate doesn't correspond.
+    </code></pre>
+        <p class="example" />
+        <pre><code>var users = [
+        { 'user': 'barney', 'active': true },
+        { 'user': 'fred', 'active': false },
+        { 'user': 'pebbles', 'active': true },
+        { 'user': 'sabrina', 'active': false }
+    ];
+    
+    var pos = users.whileIndex(o =&gt; !o.active); // => 1
+    </code></pre>
+
+        <h2><a class="anchor" name="where"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>where</h2>
+        <pre><code>Array where(predicate)
+    </code></pre>
+        <p class="arg" />
+        <pre><code>predicate: The function invoked per iteration.
+    </code></pre>
+        <p class="return" />
+        <p>(Array): Returns a array with only elements corresponding to the predicate.</p>
+        <p class="example" />
+        <pre><code> [2, 2, 2, 3, 2].where(x=>x===2);
+    // =&gt; [2, 2, 2, 2]
     </code></pre>
   </article>
 

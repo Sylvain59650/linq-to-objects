@@ -75,3 +75,45 @@ table {
 a {
   color: darkslateblue;
 }
+
+.arg,
+.return,
+.example {
+  font-weight: bolder;
+  background-color: dodgerblue;
+  color: black;
+  display: inline;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 10pt;
+  margin-right: 20px;
+}
+
+.arg:before,
+.return:before,
+.example:before {
+  clear: left;
+  content: '\A';
+}
+
+.arg {
+  background-color: darksalmon;
+}
+
+.arg:before {
+  content: "Arguments"
+}
+
+.return:before {
+  content: "Returns";
+}
+
+.example {
+  background-color: aquamarine;
+}
+
+.example:before {
+  clear: left;
+  content: "Example";
+}

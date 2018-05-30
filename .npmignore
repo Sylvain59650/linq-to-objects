@@ -4,3 +4,6 @@ tests/
 sources/
 .vscode
 gulpfile.js
+package-lock*
+docs-md/
+eslint*

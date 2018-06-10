@@ -20,7 +20,8 @@ Implements [linq](https://docs.microsoft.com/en-us/dotnet/csharp/programming-gui
 
  <a target="_blank" title="stats" href="https://www.jsdelivr.com/package/npm/linq-to-objects"><img src="https://data.jsdelivr.com/v1/package/npm/linq-to-objects/badge" /></a>
       <a target="_blank" title="script online" href="https://cdn.jsdelivr.net/npm/linq-to-objects/distrib/linq-to-objects.min.js"><img src="https://img.shields.io/badge/cdn-jsdeliv-black.svg" /></a>
-
+<img src="https://img.shields.io/npm/l/linq-to-objects.svg" />
+<img src="https://hits.dwyl.com/Sylvain59650/linq-to-objects.svg" />
 </div>
 
 # Installation

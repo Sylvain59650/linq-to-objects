@@ -93,9 +93,8 @@
     <pre><code>the current array cleared
     </code></pre>
     <p class="example" />
-    <pre><code>var a=[1,2,3,4,5];
-    a.clear();
-    console.log(a); // []
+    <pre><code>var a=[1, 2, 3, 4, 5];
+    a.clear();  //=> a=[]
     </code></pre>
     <h2><a id="user-content-concat-" class="anchor" name="concat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>concat
       <img src="img/js.png" />
@@ -111,13 +110,9 @@
     </code></pre>
     <p class="example" />
     <pre><code>var myArray = [1];
-    var other = myArray.concat(2, [3], [[4]]);
-    
-    console.log(other);
-    // =&gt; [1, 2, 3, [4]]
-    
-    console.log(myArray);
-    // =&gt; [1]
+    var other = myArray.concat(2, [3], [[4]]);  
+    // => others = [1, 2, 3, [4]]
+    // => myArray = [1]
     </code></pre>
     <h2><a id="user-content-aggregate" class="anchor" name="aggregate"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aggregate</h2>
     <pre><code>aggregate(seed,accumulate,resultSelector)
@@ -137,7 +132,7 @@
         (longest, next) =&gt;
         next.length &gt; longest.length ? next : longest,
         fruit =&gt; fruit.toUpperCase());
-    console.log("The fruit with the longest name is ",longestName);  //PASSIONFRUIT
+    // => longestName = PASSIONFRUIT
     </code></pre>
     <h2><a id="user-content-all" class="anchor" name="all"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>all</h2>
     <pre><code>all(predicate)
@@ -159,7 +154,7 @@
     <p>Provides a declarative way to compute the average value of a sequence</p>
     <pre><code>var grades = [78, 92, 100, 37, 81];
     var average = grades.average();
-    console.log("The average grade is ", average); //77.6
+    // => average = 77.6
     </code></pre>
     <h2><a id="user-content-clear-1" class="anchor" name="clear-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>clear</h2>
     <pre><code>(this) clear()
@@ -174,7 +169,7 @@
     <p class="example" />
     <pre><code>var a=[1,2,3,4,5];
     a.clear();
-    console.log(a); // []
+    // =>  a = []
     </code></pre>
     <h2><a id="user-content-count" class="anchor" name="count"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>count</h2>
     <pre><code>count(predicate)
@@ -185,8 +180,8 @@
     
     
     var fruits = ["apple", "banana", "mango", "orange", "passionfruit", "grape"];
-    console.log(fruits.count());  // 6
-    console.log(fruits.count(x =&gt; x.includes("n"))); // 4
+    fruits.count();  // 6
+    fruits.count(x =&gt; x.includes("n")); // 4
     </code></pre>
     <h2><a id="user-content-distinct" class="anchor" name="distinct"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>distinct</h2>
     <pre><code>distinct(predicate)
@@ -194,8 +189,8 @@
     <p class="return" />
     <p>distinct elements from a sequence.</p>
     <pre><code>var ages = [21, 46, 46, 55.3, 17, 21, 55.4, 55.5, 55.4, 55.3];
-    console.log(ages.distinct());  // [ 21, 46, 55.3, 17, 55.4, 55.5 ]
-    console.log(ages.distinct(Math.floor));  // [ 21, 46, 55, 17 ]
+    ages.distinct();  // [ 21, 46, 55.3, 17, 55.4, 55.5 ]
+    ages.distinct(Math.floor);  // [ 21, 46, 55, 17 ]
     </code></pre>
     <h2><a id="user-content-equals" class="anchor" name="equals"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>equals</h2>
     <pre><code>boolean equals(Array anotherArray)
@@ -343,8 +338,8 @@
     </code></pre>
     <p class="example" />
     <pre><code>var names = ["Hartono Tommy", "Adams Terry","Andersen Henriette Thaulow","Hedlund Magnus", "Ito Shu"];
-    console.log(names.firstOrDefault(name =&gt; name.length &gt; 20)); // "Andersen Henriette Thaulow"
-    console.log(names.firstOrDefault(name =&gt; name.length &gt; 200, "not found"));  // "not found"
+    names.firstOrDefault(name =&gt; name.length &gt; 20)); // "Andersen Henriette Thaulow"
+    names.firstOrDefault(name =&gt; name.length &gt; 200, "not found"));  // "not found"
     </code></pre>
     <h2><a id="user-content-foreach" class="anchor" name="foreach"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>forEach</h2>
     <pre><code>forEach(action)
@@ -391,7 +386,7 @@
     <pre><code>(Object): Returns the composed aggregate object.
     </code></pre>
     <p class="example" />
-    <pre><code>console.log([6.1, 4.2, 6.3].groupBy(Math.floor));
+    <pre><code>[6.1, 4.2, 6.3].groupBy(Math.floor);
     /*
      [ { key: '4', elements: [ 4.2 ] },
        { key: '6', elements: [ 6.1, 6.3 ] } 
@@ -507,12 +502,12 @@
       <pre><code>the current array with new values
     </code></pre>
       <p class="example" />
-      <pre><code>var a=[7,8,9,10];
-    a.insertAt(0,11);
-    console.log(a); // [11,7,8,9,10]
+      <pre><code>var a=[7, 8, 9, 10];
+    a.insertAt(0, 11);
+    // => a = [11, 7, 8, 9, 10]
     
-    a.insertAt(50,12).insertAt(4,13);
-    console.log(a); // [11,7,8,9,13,10,12]    
+    a.insertAt(50, 12).insertAt(4, 13);
+    // => a = [11, 7, 8, 9, 13, 10, 12]    
     </code></pre>
       <h2><a id="user-content-insertrangeat" class="anchor" name="insertrangeat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insertRangeAt</h2>
       <pre><code>(this) insertRangeAt(number position, Array values)
@@ -526,10 +521,10 @@
       <pre><code>the current array with new values
     </code></pre>
       <p class="example" />
-      <pre><code>var a=[7,8,9,10];
+      <pre><code>var a=[7, 8, 9, 10];
     
-    a.insertRangeAt(2,[12,13,14,15,16]);
-    console.log(a); // [7,8,12,13,14,15,16]    
+    a.insertRangeAt(2,[12, 13, 14, 15, 16]);
+    // => a = [7, 8, 12, 13, 14, 15, 16]    
     </code></pre>
       <h2><a id="user-content-intersect" class="anchor" name="intersect"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>intersect</h2>
       <pre><code>intersect(second,comparer)
@@ -567,9 +562,10 @@
       <pre><code>(*): Returns the last element from a collection, or the last element that satisfies a condition.
     </code></pre>
       <p class="example" />
-      <pre><code>console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x =&gt; x));
-    console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last(x =&gt; x &lt; 3));
-    console.log("last", [1, 2, 3, 4, 5, 2, 3, 8].last());
+      <pre><code>
+    [1, 2, 3, 4, 5, 2, 3, 8].last(x => x);  // => 8
+    [1, 2, 3, 4, 5, 2, 3, 8].last(x => x &lt; 3)); // => 2
+    [1, 2, 3, 4, 5, 2, 3, 8].last();  // => 8
     </code></pre>
       <h2><a id="user-content-lastindexof" class="anchor" name="lastindexof"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lastIndexOf</h2>
       <pre><code>number lastIndexOf(value, number fromIndex=array.length-1)
@@ -760,9 +756,10 @@
         <pre><code>Returns the array without removed element
     </code></pre>
         <p class="example" />
-        <pre><code>var ints = [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-    console.log(ints.removeAt(5)); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
-    console.log(ints); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+        <pre><code>
+    var ints = [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    ints.removeAt(5); // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+    ints            ; // [ 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
     </code></pre>
         <h2><a id="user-content-removerange" class="anchor" name="removerange"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeRange</h2>
         <pre><code>(this) removeRange(index, count)
@@ -771,9 +768,10 @@
         <p class="return" />
         <p> the array without deleted elements</p>
         <p class="example" />
-        <pre><code>var ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-    console.log(ints.removeRange(5, 5)); // [ 1, 2, 3, 4, 5, 11, 12]
-    console.log(ints); // [ 1, 2, 3, 4, 5, 11, 12 ]
+        <pre><code>
+    var ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    ints.removeRange(5, 5); // [ 1, 2, 3, 4, 5, 11, 12]
+    ints; // [ 1, 2, 3, 4, 5, 11, 12 ]
     </code></pre>
         <h2><a id="user-content-replace" class="anchor" name="replace"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace</h2>
         <pre><code>(this) replace(any value,any newValue)
@@ -794,8 +792,7 @@
         { x: 1, y: 100 }, { x: 2, y: 200 }, { x: 3, y: 300 }, { x: 4, y: 400 }
     ];
     
-    console.log(objs.replace({ x: 1 }, { x: "one", y: 1, z: 1 }));
-        
+    objs.replace({ x: 1 }, { x: "one", y: 1, z: 1 });
        /*
           [ { x: 'one', y: 1, z: 1 },{ x: 2, y: 2 },{ x: 3, y: 3 },{ x: 4, y: 4 },
             { x: 'one', y: 1, z: 1 },{ x: 2, y: 20 },{ x: 3, y: 30 },{ x: 4, y: 40 },
@@ -894,9 +891,7 @@
     ];
     
     var users4 = users.takeWhile(o =&gt; !o.active);
-    console.log("takeWhile", users4);
-    /*
-    [
+    /* =>  user4 = [
         { 'user': 'barney', 'active': false },
         { 'user': 'fred', 'active': false }
     ]
@@ -914,7 +909,7 @@
         <pre><code>(Array): Returns the new array of combined values.
     </code></pre>
         <p class="example" />
-        <pre><code>console.log("union", [2, 2, 2, 3].union([1, 2]));
+        <pre><code>[2, 2, 2, 3].union([1, 2]);
     // =&gt; [2, 3,1]
     </code></pre>
 

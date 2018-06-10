@@ -17,8 +17,10 @@ Implements [linq](https://docs.microsoft.com/en-us/dotnet/csharp/programming-gui
     <img src="https://img.shields.io/bundlephobia/min/linq-to-objects.svg" />
     <img src="https://img.shields.io/badge/eslint-ok-blue.svg" />
     <a target="_blank" title="tests" href="https://sylvain59650.github.io/linq-to-objects/"><img src="https://img.shields.io/badge/tests-passing-brightgreen.svg" /></a>
-    <img src="https://img.shields.io/npm/l/linq-to-objects.svg" />
-    <img src="https://hits.dwyl.com/Sylvain59650/linq-to-objects.svg" />
+
+ <a target="_blank" title="stats" href="https://www.jsdelivr.com/package/npm/linq-to-objects"><img src="https://data.jsdelivr.com/v1/package/npm/linq-to-objects/badge" /></a>
+      <a target="_blank" title="script online" href="https://cdn.jsdelivr.net/npm/linq-to-objects/distrib/linq-to-objects.min.js"><img src="https://img.shields.io/badge/cdn-jsdeliv-black.svg" /></a>
+
 </div>
 
 # Installation
@@ -33,18 +35,22 @@ OR
 
     require("linq-to-objects");
 
-# References in browser 
+# References in browser after install
 <code>
 
   &lt;script src="./node_modules/linq-to-objects/distrib/linq-to-objects.min.js"&gt;&lt;/script&gt;
 </code>
 
-For IE (>=10), you need to add this script
+For IE only (>=10), you need to add this polyfill script
 
 <code>
   &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"&gt;&lt;/script&gt;
 </code>
 
+# References in browser without install
+<code>
+  &lt;script src="https://cdn.jsdelivr.net/npm/linq-to-objects/distrib/linq-to-objects.min.js"&gt;&lt;/script&gt;
+</code>
 
 # Table Of Contents
 

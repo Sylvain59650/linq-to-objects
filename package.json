@@ -1,11 +1,8 @@
 {
   "name": "linq-to-objects",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Linq for javascript",
   "main": "distrib/linq-to-objects.min.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "test": "exit 0"
   },
@@ -40,7 +37,13 @@
     "where",
     "front-end","back-end"
   ],
-  "author": "Sylvain Longepée",
+  "author": "sylvain59",
+  "maintainers": [
+    {
+      "name": "sylvain59",
+      "email": "slongepee@laposte.net"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Sylvain59650/linq-to-objects/issues"

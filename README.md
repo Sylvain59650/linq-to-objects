@@ -37,21 +37,20 @@ OR
     require("linq-to-objects");
 
 # References in browser after install
-<code>
-
-  &lt;script src="./node_modules/linq-to-objects/distrib/linq-to-objects.min.js"&gt;&lt;/script&gt;
-</code>
+ ```html
+ <script src="./node_modules/linq-to-objects/distrib/linq-to-objects.min.js"></script>
+ ```
 
 For IE only (>=10), you need to add this polyfill script
 
-<code>
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"&gt;&lt;/script&gt;
-</code>
+ ```html
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+ ```
 
 # References in browser without install
-<code>
-  &lt;script src="https://cdn.jsdelivr.net/npm/linq-to-objects/distrib/linq-to-objects.min.js"&gt;&lt;/script&gt;
-</code>
+ ```html
+  <script src="https://cdn.jsdelivr.net/npm/linq-to-objects/distrib/linq-to-objects.min.js"></script>
+ ```
 
 # Table Of Contents
 
@@ -95,3 +94,6 @@ For IE only (>=10), you need to add this polyfill script
  - union
  - whileIndex
  - where
+
+
+<a href="https://sylvain59650.github.io/linq-to-objects/">API & DEMO</a>
